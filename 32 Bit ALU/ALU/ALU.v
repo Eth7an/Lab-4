@@ -15,7 +15,7 @@ module ALU(operand0, operand1, funcSel, out);
 	// funcSel 110 Register left logic shift
 	// funcSel 111 disable
 	
-	always @(funcSel) begin
+	always @(*) begin
 	
 		case (funcSel)
 			3'b000 : out = operand0 + operand1;
